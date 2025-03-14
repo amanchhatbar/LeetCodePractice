@@ -1,6 +1,7 @@
 ﻿using System.Text.Json;
 using LeetCodePractice.Domain;
 using LeetCodePractice.LinkedList;
+using LeetCodePractice.Recursion;
 using LeetCodePractice.StringManipulations;
 
 public class Program
@@ -43,7 +44,10 @@ public class Program
 
         ReverseWords reverseWords = new ReverseWords();
         var reserveWordResult = reverseWords.ReverseWordsFunction("a good   example");
-        Console.WriteLine($"The reverse words are {reserveWordResult}");
+        //Console.WriteLine($"The reverse words are {reserveWordResult}");
+
+        ProductOfArraySelf productOfArraySelf = new ProductOfArraySelf();
+        productOfArraySelf.ProductExceptSelf(new[] { 2, 3, 4, 5, 6 });
     }
 
     public void LinkedListFunctions()

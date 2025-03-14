@@ -12,3 +12,4 @@
 /Users/amanchhatbar/Development/LeetCodePractice/LeetCodePractice/LeetCodePractice/obj/Debug/net9.0/LeetCodePractice.pdb
 /Users/amanchhatbar/Development/LeetCodePractice/LeetCodePractice/LeetCodePractice/obj/Debug/net9.0/LeetCodePractice.genruntimeconfig.cache
 /Users/amanchhatbar/Development/LeetCodePractice/LeetCodePractice/LeetCodePractice/obj/Debug/net9.0/ref/LeetCodePractice.dll
+/Users/amanchhatbar/Development/LeetCodePractice/LeetCodePractice/LeetCodePractice/obj/Debug/net9.0/LeetCodePractice.sourcelink.json
