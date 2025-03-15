@@ -48,6 +48,16 @@ public class Program
 
         ProductOfArraySelf productOfArraySelf = new ProductOfArraySelf();
         productOfArraySelf.ProductExceptSelf(new[] { 2, 3, 4, 5, 6 });
+
+        IncreasingTripletProblem increasingTripletProblem = new IncreasingTripletProblem();
+        var incResult = increasingTripletProblem.IncreasingTriplet(new[] { 20, 100, 10, 12, 5, 13 });
+        // Console.WriteLine($"Increasing Triplet Subsequence {incResult}");
+
+        // StringCompression stringCompression = new StringCompression();
+        // stringCompression.Compress(new[] { 'a', 'a', 'b', 'b', 'c', 'c', 'c' ,'c', 'c', 'c' });
+
+        MoveZero moveZero = new MoveZero();
+        moveZero.MoveZeroesInPlace(new []{0,1,0,3,12});
     }
 
     public void LinkedListFunctions()
