@@ -57,7 +57,11 @@ public class Program
         // stringCompression.Compress(new[] { 'a', 'a', 'b', 'b', 'c', 'c', 'c' ,'c', 'c', 'c' });
 
         MoveZero moveZero = new MoveZero();
-        moveZero.MoveZeroesInPlace(new []{0,1,0,3,12});
+        //moveZero.MoveZeroesInPlace(new []{0,1,0,3,12});
+
+        Subsequence subsequence = new Subsequence();
+        var subResult = subsequence.IsSubsequence("", "ahbgdc");
+        Console.WriteLine($"IsSubsequence {subResult}");
     }
 
     public void LinkedListFunctions()
