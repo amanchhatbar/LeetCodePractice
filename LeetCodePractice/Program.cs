@@ -61,7 +61,11 @@ public class Program
 
         Subsequence subsequence = new Subsequence();
         var subResult = subsequence.IsSubsequence("", "ahbgdc");
-        Console.WriteLine($"IsSubsequence {subResult}");
+        // Console.WriteLine($"IsSubsequence {subResult}");
+
+        Container container = new Container();
+        var containerVol = container.MaxArea(new[] {1,8,6,2,5,4,8,3,7});
+        Console.WriteLine($"MaxArea is {containerVol}");
     }
 
     public void LinkedListFunctions()
