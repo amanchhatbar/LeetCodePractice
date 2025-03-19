@@ -1,13 +1,14 @@
 # Build artifacts
 bin/
 obj/
+idea/
 
 # User-specific files
 *.user
 *.suo
 *.vs/
 *.vscode/
-*.idea/
+*.idea
 
 # Logs
 *.log
