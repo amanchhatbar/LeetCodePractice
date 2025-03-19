@@ -2,6 +2,7 @@
 using LeetCodePractice.Domain;
 using LeetCodePractice.LinkedList;
 using LeetCodePractice.Recursion;
+using LeetCodePractice.Stack;
 using LeetCodePractice.StringManipulations;
 
 public class Program
@@ -65,7 +66,18 @@ public class Program
 
         Container container = new Container();
         var containerVol = container.MaxArea(new[] {1,8,6,2,5,4,8,3,7});
-        Console.WriteLine($"MaxArea is {containerVol}");
+        //Console.WriteLine($"MaxArea is {containerVol}");
+
+        MaxAverageSubArray averageSubArray = new MaxAverageSubArray();
+        averageSubArray.FindMaxAverage(new[] { 5 }, 1);
+
+        HighestAltitude highestAltitude = new HighestAltitude();
+        var highAttResult = highestAltitude.LargestAltitude(new[] { -4,-3,-2,-1,4,3,2 });
+        //Console.WriteLine($"HighestAltitude {highAttResult}");
+
+        StarFromString starFromString = new StarFromString();
+        var starResults = starFromString.RemoveStars("leet***cod*e");
+        Console.WriteLine($"StarFromString {starResults}");
     }
 
     public void LinkedListFunctions()
