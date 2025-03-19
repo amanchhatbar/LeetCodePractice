@@ -6,12 +6,15 @@ public class Node
     public Node? Left { get; set; }
     public Node? Right { get; set; }
     public Node? Next { get; set; }
+    
+    public Node? Random { get; set; }
 
-    public Node(int data = 0, Node? left = null, Node? right = null, Node? next = null)
+    public Node(int data = 0, Node? left = null, Node? right = null, Node? next = null, Node? random = null)
     {
         Data = data;
         Left = left;
         Right = right;
         Next = next;
+        Random = random;
     }
 }

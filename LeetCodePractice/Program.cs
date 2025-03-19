@@ -84,6 +84,22 @@ public class Program
 
         ArrayZeroMinOperations arrayZeroMinOperations = new ArrayZeroMinOperations();
         arrayZeroMinOperations.MinimumOperations([1, 5, 0, 3, 5]);
+        
+        
+        #region Add to Linked List
+        Node head = new Node(1);
+        AddToList addListMethod = new AddToList();
+        addListMethod.AddNodeLast(head, 2);
+        addListMethod.AddNodeLast(head, 3);
+        addListMethod.AddNodeLast(head, 4);
+        addListMethod.AddNodeLast(head, 5);
+        addListMethod.AddNodeLast(head, 6);
+        addListMethod.AddNodeLast(head, 7);
+        DeepCopy copy = new DeepCopy();
+        copy.CopyRandomList(head);
+        // PrintLinkedList.ConsolePrintLinkedList(head);
+
+        #endregion
     }
 
     public void LinkedListFunctions()
