@@ -1,0 +1,19 @@
+# Build artifacts
+bin/
+obj/
+idea/
+
+# User-specific files
+*.user
+*.suo
+*.vs/
+*.vscode/
+*.idea
+
+# Logs
+*.log
+
+# Dependencies
+packages/
+*.nupkg
+project.lock.json
