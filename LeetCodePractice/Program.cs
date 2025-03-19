@@ -77,7 +77,13 @@ public class Program
 
         StarFromString starFromString = new StarFromString();
         var starResults = starFromString.RemoveStars("leet***cod*e");
-        Console.WriteLine($"StarFromString {starResults}");
+        //Console.WriteLine($"StarFromString {starResults}");
+
+        AsteroidCollisionProb asteroidCollisionProb = new AsteroidCollisionProb();
+        asteroidCollisionProb.AsteroidCollision([10,2,-5]);
+
+        ArrayZeroMinOperations arrayZeroMinOperations = new ArrayZeroMinOperations();
+        arrayZeroMinOperations.MinimumOperations([1, 5, 0, 3, 5]);
     }
 
     public void LinkedListFunctions()
