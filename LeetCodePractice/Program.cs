@@ -1,5 +1,6 @@
 ﻿using System.Text.Json;
 using LeetCodePractice.Domain;
+using LeetCodePractice.DP;
 using LeetCodePractice.LinkedList;
 using LeetCodePractice.Recursion;
 using LeetCodePractice.Stack;
@@ -10,11 +11,9 @@ public class Program
     public static void Main()
     {
         Program program = new Program();
-        program.StringManip();
-    }
 
-    public void StringManip()
-    {
+        #region OldInitialization
+
         var s = "aaaabbbbcccc";
         var t = "abcabcabcabc";
         PermutationOfString permutationOfString = new PermutationOfString();
@@ -25,8 +24,8 @@ public class Program
         t = "pqr";
         MergeStringAlternate mergeStringAlternate = new MergeStringAlternate();
         var newResult = mergeStringAlternate.MergeAlternately(s, t);
-        
-        
+
+
         //Console.WriteLine($"{s} & {t} Result: {newResult}");
 
         MaxCandies maxCandies = new MaxCandies();
@@ -65,14 +64,14 @@ public class Program
         // Console.WriteLine($"IsSubsequence {subResult}");
 
         Container container = new Container();
-        var containerVol = container.MaxArea(new[] {1,8,6,2,5,4,8,3,7});
+        var containerVol = container.MaxArea(new[] { 1, 8, 6, 2, 5, 4, 8, 3, 7 });
         //Console.WriteLine($"MaxArea is {containerVol}");
 
         MaxAverageSubArray averageSubArray = new MaxAverageSubArray();
         averageSubArray.FindMaxAverage(new[] { 5 }, 1);
 
         HighestAltitude highestAltitude = new HighestAltitude();
-        var highAttResult = highestAltitude.LargestAltitude(new[] { -4,-3,-2,-1,4,3,2 });
+        var highAttResult = highestAltitude.LargestAltitude(new[] { -4, -3, -2, -1, 4, 3, 2 });
         //Console.WriteLine($"HighestAltitude {highAttResult}");
 
         StarFromString starFromString = new StarFromString();
@@ -80,13 +79,14 @@ public class Program
         //Console.WriteLine($"StarFromString {starResults}");
 
         AsteroidCollisionProb asteroidCollisionProb = new AsteroidCollisionProb();
-        asteroidCollisionProb.AsteroidCollision([10,2,-5]);
+        asteroidCollisionProb.AsteroidCollision([10, 2, -5]);
 
         ArrayZeroMinOperations arrayZeroMinOperations = new ArrayZeroMinOperations();
         arrayZeroMinOperations.MinimumOperations([1, 5, 0, 3, 5]);
-        
-        
+
+
         #region Add to Linked List
+
         // Node head = new Node(1);
         // AddToList addListMethod = new AddToList();
         // addListMethod.AddNodeLast(head, 2);
@@ -101,8 +101,13 @@ public class Program
 
         #endregion
 
-        ReorgStrings reorgStrings = new ReorgStrings();
-        reorgStrings.ReorganizeString("aaabb");
+        // ReorgStrings reorgStrings = new ReorgStrings();
+        // reorgStrings.ReorganizeString("aaabb");
+
+        Fibonacci fibonacci = new Fibonacci();
+        Console.WriteLine(fibonacci.CalculateFibMemoization(50, new Dictionary<int, long>()));
+
+        #endregion
     }
 
     public void LinkedListFunctions()
