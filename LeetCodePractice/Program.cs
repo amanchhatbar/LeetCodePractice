@@ -105,9 +105,12 @@ public class Program
         // reorgStrings.ReorganizeString("aaabb");
 
         Fibonacci fibonacci = new Fibonacci();
-        Console.WriteLine(fibonacci.CalculateFibMemoization(50, new Dictionary<int, long>()));
+        // Console.WriteLine(fibonacci.CalculateFibMemoization(50, new Dictionary<int, long>()));
 
         #endregion
+
+        GridTraveller gridTraveller = new GridTraveller();
+        Console.WriteLine(gridTraveller.GridTravellerRecurssion(18, 18, new Dictionary<(int, int), long>()));
     }
 
     public void LinkedListFunctions()
