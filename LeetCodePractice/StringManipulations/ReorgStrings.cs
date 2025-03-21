@@ -12,37 +12,34 @@ public class ReorgStrings
             dictionary[sChar]++;
         }
 
-        var priorityQueue = new PriorityQueue<char, int>(Comparer<int>.Create((a, b) => b - a));
+        var priorityQueue = new PriorityQueue<(char, int), int>(Comparer<int>.Create((a, b) => b - a));
         foreach (var keyValue in dictionary)
         {
-            priorityQueue.Enqueue(keyValue.Key, keyValue.Value);
+            priorityQueue.Enqueue((keyValue.Key, keyValue.Value), keyValue.Value);
         }
 
-        var finalQueue = new Queue<(char, int)>();
-        var timeInterval = 0;
-        var resultString = string.Empty;
-        while (priorityQueue.Count > 0 || finalQueue.Count > 0)
+        var result = new List<char>();
+
+        (char c, int freq) previous = ('#', 0);
+
+        while (priorityQueue.Count > 0)
         {
-            timeInterval++;
-            if (priorityQueue.Count > 0)
+            var (currentChar, currentFreq) = priorityQueue.Dequeue();
+            result.Add(currentChar);
+
+            if (previous.freq > 0)
             {
-                priorityQueue.TryPeek(out char element, out int count);
-                priorityQueue.Dequeue();
-                resultString += element;
-                var newCount = count - 1;
-                if (newCount > 0)
-                {
-                    finalQueue.Enqueue((element, newCount + 1));
-                }
+                priorityQueue.Enqueue(previous, previous.freq);
             }
 
-            if (finalQueue.Count > 0 && finalQueue.Peek().Item2 == timeInterval)
-            {
-                var dequeueValue = finalQueue.Dequeue();
-                priorityQueue.Enqueue(dequeueValue.Item1, dequeueValue.Item1);
-            }
+            previous = (currentChar, currentFreq - 1);
         }
 
-        return resultString;
+        if (result.Count == s.Length)
+        {
+            return new string(result.ToArray());
+        }
+
+        return String.Empty;
     }
 }

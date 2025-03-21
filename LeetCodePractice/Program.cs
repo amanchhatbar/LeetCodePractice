@@ -110,12 +110,16 @@ public class Program
         // Console.WriteLine(gridTraveller.GridTravellerRecurssion(18, 18, new Dictionary<(int, int), long>()));
         BestSum canSum = new BestSum();
         var canSumRslt = canSum.BestSumMemo(7, [5, 3, 4, 7]);
-        
+        CanConstructString canConstructString = new CanConstructString();
+        // Console.WriteLine(canConstructString.CanConstruct("eeeeeeeeeeeeeeeeeeeeeeeeeef", new List<string>() { "e", "eeeeeeeeeeeee", "eeeeee" }));
         #endregion
 
-        CanConstructString canConstructString = new CanConstructString();
-        Console.WriteLine(canConstructString.CanConstruct("eeeeeeeeeeeeeeeeeeeeeeeeeef", new List<string>() { "e", "eeeeeeeeeeeee", "eeeeee" }));
+        HowManyConstructStrings manyConstructStrings = new HowManyConstructStrings();
+        // Console.WriteLine(manyConstructStrings.ConstructStrings("enterapotentpot",
+        //     new List<string>() { "a", "p", "ent", "enter", "ot", "o","t" }));
 
+        WordBreak2 wordBreak2 = new WordBreak2();
+        wordBreak2.WordBreak();
     }
 
     public void LinkedListFunctions()
