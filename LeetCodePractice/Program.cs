@@ -106,11 +106,16 @@ public class Program
 
         Fibonacci fibonacci = new Fibonacci();
         // Console.WriteLine(fibonacci.CalculateFibMemoization(50, new Dictionary<int, long>()));
-
+        GridTraveller gridTraveller = new GridTraveller();
+        // Console.WriteLine(gridTraveller.GridTravellerRecurssion(18, 18, new Dictionary<(int, int), long>()));
+        BestSum canSum = new BestSum();
+        var canSumRslt = canSum.BestSumMemo(7, [5, 3, 4, 7]);
+        
         #endregion
 
-        GridTraveller gridTraveller = new GridTraveller();
-        Console.WriteLine(gridTraveller.GridTravellerRecurssion(18, 18, new Dictionary<(int, int), long>()));
+        CanConstructString canConstructString = new CanConstructString();
+        Console.WriteLine(canConstructString.CanConstruct("eeeeeeeeeeeeeeeeeeeeeeeeeef", new List<string>() { "e", "eeeeeeeeeeeee", "eeeeee" }));
+
     }
 
     public void LinkedListFunctions()
