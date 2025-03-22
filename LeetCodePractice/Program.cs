@@ -2,6 +2,7 @@
 using LeetCodePractice.BinaryTree;
 using LeetCodePractice.Domain;
 using LeetCodePractice.DP;
+using LeetCodePractice.Graph;
 using LeetCodePractice.LinkedList;
 using LeetCodePractice.Recursion;
 using LeetCodePractice.Stack;
@@ -12,6 +13,7 @@ public class Program
     public static void Main()
     {
         Program program = new Program();
+        HasPath bfs = new HasPath();
     }
 
     public void LinkedListFunctions()
