@@ -14,7 +14,7 @@ public class Program
     public static void Main()
     {
         Program program = new Program();
-        var testing = new LongestSubString();
+        var testing = new PermutationString();
     }
 
     public void LinkedListFunctions()
