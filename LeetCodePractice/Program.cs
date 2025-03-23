@@ -13,7 +13,7 @@ public class Program
     public static void Main()
     {
         Program program = new Program();
-        HasPath bfs = new HasPath();
+        var bfs = new LargestComponent();
     }
 
     public void LinkedListFunctions()
