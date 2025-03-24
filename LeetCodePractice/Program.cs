@@ -15,7 +15,7 @@ public class Program
     public static void Main()
     {
         Program program = new Program();
-        var testing = new CombinationSums();
+        var testing = new ReversePolish();
     }
 
     public void LinkedListFunctions()

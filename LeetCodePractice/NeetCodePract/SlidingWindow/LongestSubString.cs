@@ -2,6 +2,7 @@ namespace LeetCodePractice.NeetCodePract.SlidingWindow;
 
 public class LongestSubString
 {
+    //https://leetcode.com/problems/longest-substring-without-repeating-characters/description/
     public LongestSubString()
     {
         Console.WriteLine(LengthOfLongestSubstring("dvdf"));
