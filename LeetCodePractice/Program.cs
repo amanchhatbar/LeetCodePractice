@@ -4,6 +4,7 @@ using LeetCodePractice.Domain;
 using LeetCodePractice.DP;
 using LeetCodePractice.Graph;
 using LeetCodePractice.LinkedList;
+using LeetCodePractice.NeetCodePract.BackTracking;
 using LeetCodePractice.NeetCodePract.SlidingWindow;
 using LeetCodePractice.Recursion;
 using LeetCodePractice.Stack;
@@ -14,7 +15,7 @@ public class Program
     public static void Main()
     {
         Program program = new Program();
-        var testing = new PermutationString();
+        var testing = new CombinationSums();
     }
 
     public void LinkedListFunctions()
