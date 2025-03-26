@@ -4,6 +4,7 @@ using LeetCodePractice.Domain;
 using LeetCodePractice.DP;
 using LeetCodePractice.Graph;
 using LeetCodePractice.LinkedList;
+using LeetCodePractice.NeetCodePract;
 using LeetCodePractice.NeetCodePract.BackTracking;
 using LeetCodePractice.NeetCodePract.Graph;
 using LeetCodePractice.NeetCodePract.SlidingWindow;
@@ -16,7 +17,7 @@ public class Program
     public static void Main()
     {
         Program program = new Program();
-        var testing = new PhoneNumberTest();
+        var testing = new Anagram();
     }
 
     public void LinkedListFunctions()
