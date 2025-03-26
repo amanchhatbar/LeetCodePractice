@@ -16,7 +16,7 @@ public class Program
     public static void Main()
     {
         Program program = new Program();
-        var testing = new Islands();
+        var testing = new Permutations();
     }
 
     public void LinkedListFunctions()

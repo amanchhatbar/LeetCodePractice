@@ -20,3 +20,7 @@ idea/
 packages/
 *.nupkg
 project.lock.json
+*.dll
+*.pdb
+/LeetCodePractice/bin
+/LeetCodePractice/obj
