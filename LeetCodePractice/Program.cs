@@ -16,7 +16,7 @@ public class Program
     public static void Main()
     {
         Program program = new Program();
-        var testing = new WordExistsMatrix();
+        var testing = new PhoneNumberTest();
     }
 
     public void LinkedListFunctions()
