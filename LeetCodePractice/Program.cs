@@ -12,13 +12,14 @@ using LeetCodePractice.NeetCodePract.TwoPointer;
 using LeetCodePractice.Recursion;
 using LeetCodePractice.Stack;
 using LeetCodePractice.StringManipulations;
+using Container = LeetCodePractice.Recursion.Container;
 
 public class Program
 {
     public static void Main()
     {
         Program program = new Program();
-        var testing = new TriangularSumProg();
+        var testing = new TwoPointerContainer();
     }
 
     public void LinkedListFunctions()
