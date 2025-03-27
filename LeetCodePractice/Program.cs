@@ -8,6 +8,7 @@ using LeetCodePractice.NeetCodePract;
 using LeetCodePractice.NeetCodePract.BackTracking;
 using LeetCodePractice.NeetCodePract.Graph;
 using LeetCodePractice.NeetCodePract.SlidingWindow;
+using LeetCodePractice.NeetCodePract.TwoPointer;
 using LeetCodePractice.Recursion;
 using LeetCodePractice.Stack;
 using LeetCodePractice.StringManipulations;
@@ -17,7 +18,7 @@ public class Program
     public static void Main()
     {
         Program program = new Program();
-        var testing = new Anagram();
+        var testing = new TriangularSumProg();
     }
 
     public void LinkedListFunctions()
