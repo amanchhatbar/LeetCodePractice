@@ -19,7 +19,7 @@ public class Program
     public static void Main()
     {
         Program program = new Program();
-        var testing = new TwoPointerContainer();
+        var testing = new LongestConsecutiveSeq();
     }
 
     public void LinkedListFunctions()
