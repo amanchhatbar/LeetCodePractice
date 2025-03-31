@@ -13,7 +13,7 @@ public class Program
     public static void Main()
     {
         Program program = new Program();
-        var testing = new ValidBracketsStringStars();
+        var testing = new KokoEatingBananas();
     }
 
     public void LinkedListFunctions()

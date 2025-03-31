@@ -4,7 +4,7 @@ public class TwoSumProblem
 {
     public TwoSumProblem()
     {
-        var result = TwoSum([5,5], 10);
+        var result = TwoSumHashMap([5,5], 10);
     }
 
     public int[] TwoSum(int[] nums, int target)
@@ -28,5 +28,20 @@ public class TwoSumProblem
         }
 
         return result;
+    }
+
+
+    private int[] TwoSumHashMap(int[] nums, int target)
+    {
+        var dictionaryData = new Dictionary<int, int>();
+        for(int i = 0; i < nums.Length; i++){
+            var difference = target-nums[i];
+            if(dictionaryData.TryGetValue(difference, out var value)) {
+                return new int[] {value, i};
+            }
+            dictionaryData[nums[i]] = i;
+        }
+
+        return new int[2];
     }
 }
