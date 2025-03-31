@@ -1,14 +1,19 @@
 ﻿using LeetCodePractice.Domain;
 using LeetCodePractice.LinkedList;
 using LeetCodePractice.NeetCodePract;
+using LeetCodePractice.NeetCodePract.BackTracking;
 using LeetCodePractice.NeetCodePract.BinarySearch;
+using LeetCodePractice.Recursion;
+using LeetCodePractice.Stack;
+using LeetCodePractice.StringManipulations;
+using StringCompression = LeetCodePractice.StringManipulations.StringCompression;
 
 public class Program
 {
     public static void Main()
     {
         Program program = new Program();
-        var testing = new SearchTwoDMatrix();
+        var testing = new ValidBracketsStringStars();
     }
 
     public void LinkedListFunctions()
