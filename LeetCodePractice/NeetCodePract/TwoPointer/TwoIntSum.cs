@@ -8,28 +8,14 @@ public class TwoIntSum
     }
     public int[] TwoSum(int[] numbers, int target)
     {
-        var result = new int[2];
-        var left = 0;
-        var right = numbers.Length - 1;
-        while (left <= right)
+        var numDictionary = new Dictionary<int, int>();
+        for (int i = 0; i < numbers.Length; i++)
         {
-            var tempSum = numbers[left] + numbers[right];
-            if (tempSum == target)
-            {
-                result[0] = left + 1;
-                result[1] = right + 1;
-                break;
-            }
-            if (target < tempSum)
-            {
-                right--;
-            }
-            else
-            {
-                left++;
-            }
+            var difference = target - numbers[i];
+            if (numDictionary.ContainsKey(difference)) return new[] { numbers[i], difference };
+            numDictionary[numbers[i]] = i;
         }
 
-        return result;
+        return new int[2];
     }
 }

@@ -22,13 +22,15 @@ public class GenerateParanthesis
             return;
         }
         
-        if(leftN < n){
-            CreateParenthesisBT(leftN+1, rightN, n, result, temp+"(");
+        if(leftN < n)
+        {
+            CreateParenthesisBT(leftN + 1, rightN, n, result, temp + "(");
         }
         
         
-        if(leftN > rightN){
-            CreateParenthesisBT(leftN, rightN+1, n, result, temp+")");
+        if(leftN > rightN)
+        {
+            CreateParenthesisBT(leftN, rightN + 1, n, result, temp + ")");
         }        
     }
 }
