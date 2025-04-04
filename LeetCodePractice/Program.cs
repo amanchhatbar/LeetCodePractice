@@ -1,4 +1,5 @@
 ﻿using LeetCodePractice.Domain;
+using LeetCodePractice.DP;
 using LeetCodePractice.LinkedList;
 using LeetCodePractice.NeetCodePract.TwoPointer;
 
@@ -7,7 +8,7 @@ public class Program
     public static void Main()
     {
         Program program = new Program();
-        var testing = new TwoIntSum();
+        var testing = new SelectBuildings();
     }
 
     public void LinkedListFunctions()
