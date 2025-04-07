@@ -1,5 +1,6 @@
 ﻿using LeetCodePractice.Domain;
 using LeetCodePractice.DP;
+using LeetCodePractice.LeetCodeDSA;
 using LeetCodePractice.LinkedList;
 using LeetCodePractice.NeetCodePract;
 using LeetCodePractice.NeetCodePract.TwoPointer;
@@ -9,7 +10,7 @@ public class Program
     public static void Main()
     {
         Program program = new Program();
-        var testing = new LongestPalindromeProb();
+        var testing = new LongestIncreasingSubSeq();
     }
 
     public void LinkedListFunctions()
