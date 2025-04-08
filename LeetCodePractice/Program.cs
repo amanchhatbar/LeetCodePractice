@@ -1,6 +1,7 @@
 ﻿using LeetCodePractice.Domain;
 using LeetCodePractice.DP;
 using LeetCodePractice.LeetCodeDSA;
+using LeetCodePractice.LeetCodeDSA.Array;
 using LeetCodePractice.LinkedList;
 using LeetCodePractice.NeetCodePract;
 using LeetCodePractice.NeetCodePract.TwoPointer;
@@ -10,7 +11,7 @@ public class Program
     public static void Main()
     {
         Program program = new Program();
-        var testing = new LongestIncreasingSubSeq();
+        var testing = new MaxConsecutiveOnes();
     }
 
     public void LinkedListFunctions()
