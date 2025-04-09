@@ -15,7 +15,6 @@ public class HouseRobber
 
     public int DP(int i, int[] nums, Dictionary<int, int> memo)
     {
-
         if (i == 0) return nums[0];
         if (i == 1) return Math.Max(nums[1], nums[0]);
 
