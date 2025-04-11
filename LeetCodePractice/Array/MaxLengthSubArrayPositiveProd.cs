@@ -4,33 +4,31 @@ public class MaxLengthSubArrayPositiveProd
 {
     public MaxLengthSubArrayPositiveProd()
     {
-        Console.Write(GetMaxLen([-1,-2,-3,0,1]));
+        Console.Write(GetMaxLen([1,-2,-3,4]));
     }
     public int GetMaxLen(int[] nums)
     {
-        if (nums.Length == 0) return 0;
+        var maxValue = 0;
+        var positive = 0;
+        var negative = 0;
 
-        var maxProduct = nums[0];
-        var minProduct = nums[0];
-        var result = nums[0];
-        var counter = 0;
-        var tempMax = 0;
-        foreach (var num in nums)
-        {
-            if (num < 0)
-            {
-                (maxProduct, minProduct) = (minProduct, maxProduct);
+        for(int i = 0; i < nums.Length; i++){
+            if(nums[i] > 0){
+                positive+=1;
+                negative = negative > 0 ? negative+1 : 0;
             }
-
-            maxProduct = Math.Max(num, maxProduct * num);
-            minProduct = Math.Max(num, minProduct * num);
-            if (result < maxProduct)
-            {
-                result = maxProduct;
-                counter++;
+            else if(nums[i] < 0){
+                var temp = positive;
+                positive = negative > 0 ? negative+1 : 0;
+                negative = temp > 0 ? temp+1 : 1;
             }
+            else{
+                positive = 0;
+                negative = 0;
+            }
+            maxValue = Math.Max(maxValue, positive);
         }
 
-        return result;
+        return maxValue;
     }
 }

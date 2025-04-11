@@ -6,7 +6,6 @@ public class SelectBuildings
     {
         NumberOfWays("001101");
     }
-    
     public long NumberOfWays(string s)
     {
         long count0 = 0, count1 = 0; 

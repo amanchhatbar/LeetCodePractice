@@ -4,73 +4,54 @@ public class RottenOranges
 {
     public RottenOranges()
     {
-        OrangesRotting([[2, 1, 1], [1, 1, 0], [0, 1, 1]]);
+        Console.WriteLine(OrangesRotting([[2, 1, 1], [1, 1, 0], [0, 1, 1]]));
     }
     
-    public int OrangesRotting(int[][] grid) {
-        //BFS
-        var totalTime = 0;
-        List<(int, int)> freshList = new List<(int, int)>();
-        List<(int, int)> rottenList = new List<(int, int)>();
-        List<(int, int)> emptyGrid = new List<(int, int)>();
-
-        for (int i = 0; i < grid[0].Length; i++)
-        {
-            for (int j = 0; j < grid[1].Length; j++)
-            {
-                switch (grid[i][j])
-                {
-                    case 0 : emptyGrid.Add((i, j));
-                        break;
-                    case 1 : freshList.Add((i, j));
-                        break;
-                    case 2 : rottenList.Add((i, j));
-                        break;
-                    
-                }
-            }
-        }
-        
-        //Start with rotten oranges and mark all fresh rotten with one time increment.
-        var didChange = true;
-        foreach (var rottenOrange in rottenList)
-        {
-            didChange = MarkRotten(rottenOrange, freshList, rottenList, emptyGrid, grid);
-            if (didChange) totalTime++;
-        }
-        
-        return totalTime;
-    }
-
-
-    private bool MarkRotten((int,int) rottenOrange, List<(int, int)> freshList, List<(int, int)> rottenList, List<(int, int)> emptyGrid, int[][] grid)
+    public int OrangesRotting(int[][] grid)
     {
-        var didWork = false;
-        
-            // check if it can move in either direction && has a fresh list object then move
-            var nextVisit = new List<(int, int)>()
+        var queue = new Queue<(int, int)>();
+        var directions = new List<(int, int)> {(-1, 0), (0, 1), (1, 0), (0, -1)};
+        var freshOranges = 0;
+        for (int i = 0; i < grid.Length; i++)
+        {
+            for (int j = 0; j < grid[0].Length; j++)
             {
-                (rottenOrange.Item1 - 1, rottenOrange.Item2),
-                (rottenOrange.Item1 + 1, rottenOrange.Item2),
-                (rottenOrange.Item1, rottenOrange.Item2 - 1),
-                (rottenOrange.Item1, rottenOrange.Item2 + 1)
-            };
-
-            foreach (var nextVisitPos in nextVisit)
-            {
-                if (nextVisitPos.Item1 > 0 && nextVisitPos.Item2 > 0
-                                           && nextVisitPos.Item1 < grid[0].Length && nextVisitPos.Item2 < grid[1].Length
-                                           && freshList.Contains(nextVisitPos))
+                if (grid[i][j] == 2)
                 {
-                    var index = freshList.IndexOf(nextVisitPos);
-                    rottenList.Add(nextVisitPos);
-                    freshList.RemoveAt(index);
-                    didWork = true;
+                    queue.Enqueue((i, j));
+                }
+
+                if (grid[i][j] == 1) freshOranges++;
+            }
+        }
+
+        var minutesElapsed = 0;
+        while (queue.Count > 0 && freshOranges > 0)
+        {
+            var size = queue.Count;
+            for (int i = 0; i < size; i++)
+            {
+                var rottenCoordinates = queue.Dequeue();
+
+                foreach (var direction in directions)
+                {
+                    var newX = direction.Item1 + rottenCoordinates.Item1;
+                    var newY = direction.Item2 + rottenCoordinates.Item2;
+
+                    if (newX < 0 || newY < 0) continue;
+                    if (newX >= grid.Length || newY >= grid[0].Length) continue;
+
+                    if (grid[newX][newY] != 1) continue;
+
+                    grid[newX][newY] = 2;
+                    queue.Enqueue((newX, newY));
+                    freshOranges--;
                 }
             }
-            // else do nothing
-        
 
-        return didWork;
+            minutesElapsed++;
+        }
+
+        return freshOranges > 0 ? -1 : minutesElapsed;
     }
 }
