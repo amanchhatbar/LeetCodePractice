@@ -6,16 +6,22 @@ public class MaximumDifffBtwAnsNodes
 {
     public int MaxAncestorDiff(TreeNode root)
     {
-        return DFS(root, Int32.MinValue, Int32.MaxValue);
+        return DFS(root, root.val, root.val);
     }
-    
-    
-    private int DFS(TreeNode node, int maxValue, int minValue)
+
+    private int DFS(TreeNode root, int max, int min)
     {
-        if (node == null) return 0;
-        
-        var left = DFS(node.left, maxValue, minValue);
-        var right = DFS(node.right, maxValue, minValue);
-        return 1;
+
+        if (root == null)
+        {
+            return max - min;
+        }
+
+        max = Math.Max(max, root.val);
+        min = Math.Min(min, root.val);
+
+        var left = DFS(root.left, max, min);
+        var right = DFS(root.right, max, min);
+        return Math.Max(left, right);
     }
 }
