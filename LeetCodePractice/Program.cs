@@ -16,7 +16,7 @@ public class Program
     public static void Main()
     {
         Program program = new Program();
-        var testing = new PathFromSource();
+        var testing = new WordSearchProb();
     }
 
     public void LinkedListFunctions()
