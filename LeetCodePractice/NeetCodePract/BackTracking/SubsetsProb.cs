@@ -4,7 +4,8 @@ public class SubsetsProb
 {
     public SubsetsProb()
     {
-        Subsets([1, 2, 3]);
+        var result = new List<List<int>>();
+        SubsetsRecursive(result, 0, [1, 2, 3], new List<int>());
     }
     public List<List<int>> Subsets(int[] nums) {
         List<List<int>> res = new List<List<int>>();
@@ -18,5 +19,19 @@ public class SubsetsProb
             }
         }
         return res;
+    }
+
+    public void SubsetsRecursive(List<List<int>> answer, int i, int[] nums, List<int> current)
+    {
+        if (i > nums.Length) return;
+
+        answer.Add(new List<int>(current));
+        for (int j = i; j < nums.Length; j++)
+        {
+            current.Add(nums[j]);
+            SubsetsRecursive(answer, j+1, nums, current);
+            current.RemoveAt(current.Count - 1);
+        }
+
     }
 }
