@@ -2,7 +2,7 @@ namespace LeetCodePractice.LeetCodeDSA.Array;
 
 public class KRadiusSubArray
 {
-
+//https://leetcode.com/problems/k-radius-subarray-averages/description/
     public KRadiusSubArray()
     {
         GetAverages([1000], 100000000);
