@@ -1,10 +1,11 @@
-﻿using LeetCodePractice.LeetCodeDSA.BackTracking;
+﻿using LeetCodePractice.DP;
+using LeetCodePractice.LeetCodeDSA.BackTracking;
 
 public class Program
 {
     public static void Main()
     {
         Program program = new Program();
-        var testing = new WordSearchProb();
+        var testing = new SelectBuildings();
     }
 }

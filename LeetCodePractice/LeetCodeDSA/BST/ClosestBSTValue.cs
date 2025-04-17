@@ -4,7 +4,6 @@ namespace LeetCodePractice.LeetCodeDSA.BST;
 
 public class ClosestBSTValue
 {
-    
     public int ClosestValue(TreeNode root, double target)
     {
         var stack = new Stack<TreeNode>();
