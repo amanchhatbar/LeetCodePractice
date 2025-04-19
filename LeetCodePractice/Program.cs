@@ -7,6 +7,6 @@ public class Program
     public static void Main()
     {
         Program program = new Program();
-        var testing = new MaxSumSubArray();
+        var testing = new CloseStringsProg();
     }
 }
